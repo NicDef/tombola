@@ -14,7 +14,7 @@ random.shuffle(prizes)
 tombola_data = list(zip(uuids, prizes))
 
 # Url erstellen
-base_url = "https://tombola.onrender.com/redeem"
+base_url = "https://tombola-xp22.onrender.com/redeem"
 urls = [f"{base_url}?code={uid}" for uid, _ in tombola_data]
 
 # QR-Codes erstellen und speichern
