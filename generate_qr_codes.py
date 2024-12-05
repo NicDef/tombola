@@ -3,12 +3,20 @@ import random
 import qrcode
 import csv
 
-# Generiere 150 UUIDS
-uuids = [str(uuid.uuid4()) for _ in range(150)]
-
 # Gewinne und Nieten erstellen
-prizes = ["Hauptgewinn"] * 5 + ["Gewinn"] * 45 + ["Niete"] * 100
+prizes = (
+    ["Hauptgewinn Nr. 1"]
+    + ["Hauptgewinn Nr. 2"]
+    + ["Hauptgewinn Nr. 3"]
+    + ["Hauptgewinn Nr. 4"]
+    + ["Hauptgewinn Nr. 5"]
+    + ["Gewinn"] * 3
+    + ["Niete"] * 3
+)
 random.shuffle(prizes)
+
+# Generiere UUIDS
+uuids = [str(uuid.uuid4()) for _ in range(len(prizes))]
 
 # UUIDs und Gewinne verknüpfen
 tombola_data = list(zip(uuids, prizes))
