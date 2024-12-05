@@ -31,5 +31,10 @@ def redeem():
         return "Ungültiger QR-Code. Melden Sie sich bitte beim Stand der Tombola"
 
 
+@app.route("/")
+def home():
+    return f"<h1>Tombola am Ludwigsgymnasium</h1>"
+
+
 if __name__ == "__main__":
     app.run(debug=True)
